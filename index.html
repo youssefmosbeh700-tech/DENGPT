@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DENGPT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">D</div>
+        <span>DENGPT</span>
+      </div>
+
+      <div class="top-actions">
+        <button id="newChatBtn">＋ New Chat</button>
+        <button id="themeBtn">☾</button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <button class="new-chat" id="sidebarNewChat">＋ New Chat</button>
+
+      <div class="menu">
+        <button class="menu-item active">
+          <span>⌕</span>
+          <span>Chat</span>
+        </button>
+
+        <button class="menu-item">
+          <span>⌘</span>
+          <span>Coding</span>
+        </button>
+
+        <button class="menu-item">
+          <span>◈</span>
+          <span>Website Builder</span>
+        </button>
+
+        <button class="menu-item">
+          <span>▧</span>
+          <span>Images</span>
+        </button>
+
+        <button class="menu-item">
+          <span>□</span>
+          <span>Files</span>
+        </button>
+      </div>
+
+      <div class="sidebar-bottom">
+        <button class="menu-item">
+          <span>⚙</span>
+          <span>Settings</span>
+        </button>
+
+        <div class="user-card">
+          <div class="avatar">G</div>
+          <div>
+            <strong>Guest</strong>
+            <small>Not signed in</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="welcome" id="welcome">
+        <div class="hero-logo">D</div>
+
+        <h1>What can I help you build?</h1>
+
+        <p>
+          DENGPT is your AI assistant for coding, websites,
+          ideas and more.
+        </p>
+
+        <div class="quick-actions">
+          <button data-prompt="Build me a modern website">
+            <span>◈</span>
+            Build a website
+          </button>
+
+          <button data-prompt="Help me write code">
+            <span>⌘</span>
+            Write code
+          </button>
+
+          <button data-prompt="Help me debug my code">
+            <span>⚡</span>
+            Debug code
+          </button>
+
+          <button data-prompt="Give me a creative idea">
+            <span>✦</span>
+            Get an idea
+          </button>
+        </div>
+      </section>
+
+      <section class="chat" id="chat"></section>
+
+      <section class="composer-area">
+        <div class="composer">
+          <button class="icon-btn" id="attachBtn" title="Attach file">＋</button>
+
+          <textarea
+            id="messageInput"
+            rows="1"
+            placeholder="Message DENGPT..."
+            autocomplete="off"
+          ></textarea>
+
+          <button class="icon-btn" id="voiceBtn" title="Voice">◉</button>
+
+          <button class="send-btn" id="sendBtn" title="Send">
+            ↑
+          </button>
+        </div>
+
+        <div class="composer-info">
+          <span>DENGPT can make mistakes. Check important information.</span>
+          <span id="status">Ready</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <input type="file" id="fileInput" hidden>
+
+  <script src="script.js"></script>
+</body>
+</html>
